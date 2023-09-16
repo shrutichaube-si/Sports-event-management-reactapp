@@ -1,0 +1,34 @@
+
+        body, ul {
+            margin: 0;
+            padding: 0px;
+        }
+
+        /* Style for the navigation bar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        /* Style for the navigation links */
+        nav ul {
+            list-style: none;
+            padding: 8px;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Style for the navigation links on hover */
+        nav a:hover {
+            text-decoration: underline;
+        }
+

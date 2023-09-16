@@ -1,0 +1,26 @@
+
+  .ulstyle li {
+    display: inline-grid;
+    
+    list-style-type: none; 
+  }
+
+  .hijk{
+    background-color: #1cbb07;
+    padding-right: 100px;
+  }
+  
+  .ulstyle a {
+    display: block;
+    padding: 8px;
+    background-color: #1cbb07;
+  }
+  .ulstyle li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  .ulstyle li a:hover {
+    background-color: #111;
+  }
