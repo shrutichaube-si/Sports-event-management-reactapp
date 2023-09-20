@@ -12,7 +12,7 @@ export default function AdminDashboard() {
       <div class="sidebar">
         <ul>
         
-            <li><a ><Link to="./details">Add details</Link></a></li>
+            {/* <li><a ><Link to="./details">Add details</Link></a></li> */}
             <li><a><Link to="./equipment">Add Equipment</Link></a></li>
             <li><a><Link to="/Home">Logout</Link></a></li>  
         </ul>

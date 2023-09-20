@@ -113,5 +113,40 @@ app.get("/getsportsinfo",async (req,res)=>{
     res.send(data.rows)
 })
 
+//venue add
+app.post("/getvenuesinfo",async(req,res)=>{
+    const sport=req.body.sport;
+    console.log(req.body)
+    const data = await client.query(
+        `SELECT Distinct "Venue" FROM "SportzSchema"."AdminEquipment" where "Sports_Name"=$1`,
+        [sport]
+    )
+    res.send(data.rows);
+})
+
+// equi add
+app.post("/geteqsinfo",async(req,res)=>{
+    const sport=req.body.sport
+    const venue=req.body.venue
+    const data=await client.query(
+        `SELECT "Equipment_Name" FROM "SportzSchema"."AdminEquipment" where "Sports_Name"=$1 and "Venue"=$2`,
+        [sport,venue]
+    )
+    res.send(data.rows)
+    console.log(data.rows)
+})
+//duration add
+app.post("/getdurinfo",async(req,res)=>{
+    const sport=req.body.sport
+    const venue=req.body.venue
+    const data=await client.query(
+        `SELECT "Duration" FROM "SportzSchema"."AdminEquipment" where "Sports_Name"=$1 and "Venue"=$2`,
+        [sport,venue]
+    )
+    res.send(data.rows)
+    console.log(data.rows)
+})
+
+
 
 app.listen(5000, () => console.log("Server on localhost:5000"));
